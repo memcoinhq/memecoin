@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>$MEMECOIN</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #050505;
+      overflow-x: hidden;
+    }
+
+    /* STAR BACKGROUND */
+    .stars {
+      position: fixed;
+      top:0; left:0; width:100%; height:100%;
+      background: black;
+      z-index: 0;
+    }
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 3s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+      100% { opacity: 0.3; }
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffcc00;
+      z-index: 1;
+      position: relative;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero img {
+      width: 150px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      opacity: 0.95;
+    }
+
+    .hero h1 {
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      opacity: 0.9;
+      margin-bottom: 20px;
+      max-width: 500px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 14px 32px;
+      background: #ffcc00;
+      color: #000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      color: #ffcc00;
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      text-align: left;
+      display: inline-block;
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.6;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- STAR BACKGROUND -->
+<div class="stars" id="stars"></div>
+
+<header>$MEMECOIN</header>
+
+<div class="hero">
+  <!-- Meme image -->
+  <img src="meme.png" alt="$MEMECOIN">
+
+  <!-- Hero text -->
+  <h1>The most useless coin on the internet 🚀</h1>
+  <p>No utility. Just vibes and memes. Join the cult of degens!</p>
+
+  <!-- Buy button -->
+  <a class="btn" href="#">Buy (Soon)</a>
+</div>
+
+<section>
+  <h2>About</h2>
+  <p>
+    $MEMECOIN was created as a joke that went too far.  
+    There is no roadmap. There is no promise. Only memes.
+  </p>
+</section>
+
+<section>
+  <h2>Tokenomics</h2>
+  <ul>
+    <li>Total Supply: 1,000,000,000</li>
+    <li>Tax: 0%</li>
+    <li>Liquidity: Locked? Maybe 🔒</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Roadmap</h2>
+  <ol>
+    <li>Launch 🚀</li>
+    <li>Memes 📈</li>
+    <li>More Memes 🔥</li>
+    <li>Chaos ???</li>
+  </ol>
+</section>
+
+<footer>
+  © 2026 $MEMECOIN — no promises, just memes
+</footer>
+
+<script>
+  // GENERATE RANDOM STARS
+  const starsContainer = document.getElementById('stars');
+  const starCount = 100;
+  for (let i = 0; i < starCount; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    const size = Math.random()*3 + 2; // bigger stars
+    star.style.width = size + 'px';
+    star.style.height = size + 'px';
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = (Math.random()*3 + 2) + 's';
+    starsContainer.appendChild(star);
+  }
+</script>
+
+</body>
+</html>
