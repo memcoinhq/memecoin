@@ -11,65 +11,60 @@
       font-family: Arial, Helvetica, sans-serif;
       color: white;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
       background-color: #050505;
       overflow-x: hidden;
     }
 
-    /* STAR BACKGROUND */
     .stars, .coins {
       position: fixed;
       top:0; left:0; width:100%; height:100%;
-      background: black;
       z-index: 0;
     }
-    .star, .coin {
+
+    .star {
       position: absolute;
+      background: white;
       border-radius: 50%;
       opacity: 0.8;
       animation: twinkle 3s infinite alternate;
     }
-    .star {
-      background: white;
-    }
+
     .coin {
+      position: absolute;
       background: gold;
-      width: 6px;
-      height: 6px;
-      opacity: 0.7;
+      border-radius: 50%;
+      opacity: 0.6;
       animation: drift linear infinite;
     }
 
     @keyframes twinkle {
       0% { opacity: 0.3; }
-      50% { opacity: 0.8; }
-      100% { opacity: 0.3; }
+      100% { opacity: 0.8; }
     }
 
     @keyframes drift {
-      0% { transform: translateY(0) translateX(0); }
-      100% { transform: translateY(100vh) translateX(50px); }
+      from { transform: translateY(-10vh); }
+      to { transform: translateY(110vh); }
     }
 
     header {
       text-align: center;
-      padding: 30px 20px;
+      padding: 30px;
       font-size: 28px;
       font-weight: bold;
       color: #ffcc00;
-      z-index: 1;
       position: relative;
+      z-index: 1;
     }
 
     .hero {
-      flex: 1;
+      min-height: 80vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px;
       position: relative;
       z-index: 1;
     }
@@ -77,8 +72,6 @@
     .hero img {
       width: 150px;
       margin-bottom: 20px;
-      border-radius: 12px;
-      opacity: 0.95;
     }
 
     .hero h1 {
@@ -87,9 +80,8 @@
     }
 
     .hero p {
-      opacity: 0.9;
-      margin-bottom: 20px;
       max-width: 500px;
+      opacity: 0.9;
     }
 
     .btn {
@@ -114,146 +106,88 @@
 
     h2 {
       color: #ffcc00;
-      margin-bottom: 15px;
-    }
-
-    ul, ol {
-      text-align: left;
-      display: inline-block;
-      margin-top: 0;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      font-size: 14px;
       opacity: 0.6;
       position: relative;
       z-index: 1;
-    }
-
-    /* Optional scrolling hype marquee */
-    .marquee {
-      margin-top: 20px;
-      font-size: 16px;
-      color: #ffcc00;
-      animation: marquee 15s linear infinite;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
     }
   </style>
 </head>
 
 <body>
 
-<!-- STAR AND COIN BACKGROUND -->
 <div class="stars" id="stars"></div>
 <div class="coins" id="coins"></div>
 
 <header>$MEMECOIN</header>
 
 <div class="hero">
-  <!-- Meme image -->
   <img src="meme.png" alt="$MEMECOIN">
 
-  <!-- Hero text -->
-  <h1>The most useless coin on the internet 🚀</h1>
-  <p>No utility. Just vibes and memes. Join the cult of degens!</p>
+  <h1>$MEMECOIN IS LIVE 🚀🌕</h1>
+  <p>No roadmap. No utility. Just memes, chaos, and vibes.</p>
 
-  <!-- Hype text -->
-  <p style="font-size:18px; color:#ffdd55; font-weight:bold; margin-top:10px;">
-    🚀 HODL for the memes, not the money! 🌕 To the moon? Maybe. To chaos? Definitely! 🔥
+  <p style="color:#ffdd55; font-weight:bold;">
+    You’re early. Don’t overthink it.
   </p>
 
-  <!-- Buy button linking to pump.fun -->
-  <a class="btn" href="https://pump.fun" target="_blank">
+  <a class="btn" href="https://join.pump.fun/HSag/kodvfguy" target="_blank">
     Buy $MEMECOIN on Pump.fun 🚀
   </a>
 
-  <!-- Optional scrolling hype -->
-  <div class="marquee">
-    🌕 $MEMECOIN is live soon! 🔥 Meme, HODL, repeat! 💎🙌
-  </div>
+  <p style="margin-top:10px; font-size:14px; opacity:0.8;">
+    Official link: https://join.pump.fun/HSag/kodvfguy
+  </p>
 </div>
 
 <section>
   <h2>About</h2>
   <p>
-    $MEMECOIN was created as a joke that went too far.  
-    There is no roadmap. There is no promise. Only memes.
+    $MEMECOIN is a community-driven meme experiment.
+    No promises, no fake plans — just culture, jokes, and organic chaos.
   </p>
 </section>
 
 <section>
-  <h2>Tokenomics</h2>
-  <ul>
-    <li>Total Supply: 1,000,000,000</li>
-    <li>Tax: 0%</li>
-    <li>Liquidity: Locked? Maybe 🔒</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Roadmap</h2>
-  <ol>
-    <li>Launch 🚀</li>
-    <li>Memes 📈</li>
-    <li>More Memes 🔥</li>
-    <li>Chaos ???</li>
-  </ol>
-</section>
-
-<!-- Pump.fun live section -->
-<section>
-  <h2>$MEMECOIN Live</h2>
-  <!-- iframe can be added after launch -->
-</section>
-
-<!-- Meme Video Section -->
-<section>
-  <h2>Watch $MEMECOIN Memes</h2>
-  <p>Need more hype? Check out our meme video for maximum chaos! 🎉</p>
-  <a class="btn" href="https://www.youtube.com/watch?v=i1H581TCc4A" target="_blank" style="background:#ff5500;">
+  <h2>Watch the Memes</h2>
+  <a class="btn" style="background:#ff5500;"
+     href="https://www.youtube.com/watch?v=i1H581TCc4A" target="_blank">
     Watch on YouTube 🎬
   </a>
 </section>
 
 <footer>
-  © 2026 $MEMECOIN — no promises, just memes
+  © 2026 $MEMECOIN — memes decide everything
 </footer>
 
 <script>
-  // GENERATE RANDOM STARS
-  const starsContainer = document.getElementById('stars');
-  const starCount = 100;
-  for (let i = 0; i < starCount; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    const size = Math.random()*3 + 2; // bigger stars
-    star.style.width = size + 'px';
-    star.style.height = size + 'px';
-    star.style.top = Math.random() * 100 + 'vh';
-    star.style.left = Math.random() * 100 + 'vw';
-    star.style.animationDuration = (Math.random()*3 + 2) + 's';
-    starsContainer.appendChild(star);
+  const stars = document.getElementById('stars');
+  const coins = document.getElementById('coins');
+
+  for (let i = 0; i < 100; i++) {
+    let s = document.createElement('div');
+    s.className = 'star';
+    let size = Math.random()*3 + 2;
+    s.style.width = size + 'px';
+    s.style.height = size + 'px';
+    s.style.top = Math.random()*100 + 'vh';
+    s.style.left = Math.random()*100 + 'vw';
+    stars.appendChild(s);
   }
 
-  // GENERATE FLOATING $MEMECOIN COINS
-  const coinsContainer = document.getElementById('coins');
-  const coinCount = 30;
-  for (let i = 0; i < coinCount; i++) {
-    const coin = document.createElement('div');
-    coin.className = 'coin';
-    coin.style.width = (Math.random()*5 + 3) + 'px';
-    coin.style.height = (Math.random()*5 + 3) + 'px';
-    coin.style.top = Math.random() * 100 + 'vh';
-    coin.style.left = Math.random() * 100 + 'vw';
-    coin.style.animationDuration = (Math.random()*10 + 10) + 's';
-    coinsContainer.appendChild(coin);
+  for (let i = 0; i < 30; i++) {
+    let c = document.createElement('div');
+    c.className = 'coin';
+    let size = Math.random()*6 + 4;
+    c.style.width = size + 'px';
+    c.style.height = size + 'px';
+    c.style.left = Math.random()*100 + 'vw';
+    c.style.animationDuration = (Math.random()*15 + 10) + 's';
+    coins.appendChild(c);
   }
 </script>
 
